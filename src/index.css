@@ -12,3 +12,8 @@
     @apply rounded-2xl border p-2 text-center;
   }
 }
+
+@font-face {
+  font-family: 'Tenada';
+  src: url('./assets/fonts/Tenada.ttf');
+}
