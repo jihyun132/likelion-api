@@ -43,23 +43,31 @@ const UserInfo = () => {
   };
 
   return (
-    <div className="flex h-screen w-screen items-center justify-center">
-      <fieldset className="border p-5">
-        <legend className="p-2">회원 정보</legend>
+    <div className="flex h-screen w-screen items-center justify-center bg-gradient-to-l from-blue-100 to-purple-200">
+      <fieldset className="border p-5 bg-white w-sm">
+        <legend className="p-2 font-['Tenada'] text-2xl">회원 정보</legend>
         {userInfo ? (
           <>
             <div>
-              <strong>번호:</strong> {userInfo.userId}
+              <strong className="mr-2">번호:</strong>
+              {userInfo?.userId}
             </div>
             <div>
-              <strong>ID:</strong> {userInfo.username}
+              <strong className="mr-2">ID:</strong>
+              {userInfo?.username}
             </div>
             <div>
-              <strong>닉네임:</strong>
+              <strong className="mr-2">닉네임:</strong>
               {!isEditing ? (
                 <>
-                  {userInfo.nickname}
-                  <button onClick={handleEditClick}>수정하기</button>
+                  {userInfo?.nickname}
+                  <button
+                    onClick={handleEditClick}
+                    className="px-3 py-1 ml-5 bg-black text-white p-2 rounded-xl text-sm text-center
+                    hover:bg-gray-700 transition mt-5"
+                  >
+                    수정하기
+                  </button>
                 </>
               ) : (
                 <>
@@ -67,9 +75,15 @@ const UserInfo = () => {
                     type="text"
                     value={newNickname}
                     onChange={(e) => setNewNickname(e.target.value)}
-                    className="border p-1"
+                    className="border border-gray-300 px-5 py-0.5 rounded-xl"
                   />
-                  <button onClick={handleSaveClick}>저장</button>
+                  <button
+                    onClick={handleSaveClick}
+                    className="px-3 py-1 ml-2 bg-black text-white p-2 rounded-xl text-sm text-centerq
+                    hover:bg-gray-700 transition mt-5"
+                  >
+                    저장
+                  </button>
                 </>
               )}
             </div>
