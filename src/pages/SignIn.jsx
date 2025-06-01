@@ -30,22 +30,30 @@ const SignIn = () => {
   };
 
   return (
-    <div className="flex h-screen w-screen items-center justify-center">
-      <fieldset className="border p-5">
-        <legend className="p-2">로그인</legend>
-        <form onSubmit={SignInHandler} className="flex flex-col gap-2 p-5">
+    <div className="flex h-screen w-screen items-center justify-center bg-gradient-to-l from-purple-200 to-pink-100">
+      <fieldset className="border p-5 bg-white">
+        <legend className="p-2 font-['Tenada'] text-2xl">로그인</legend>
+        <form onSubmit={SignInHandler} className="flex flex-col gap-2 p-5 w-xs">
           <input
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             placeholder="ID"
+            className="px-5"
           />
           <input
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Password"
             type="password"
+            className="px-5"
           />
-          <button type="submit">로그인</button>
+          <button
+            type="submit"
+            className=" font-['Tenada'] bg-black text-white p-2 rounded-xl text-center 
+            hover:bg-gray-800 transition mt-5"
+          >
+            로그인
+          </button>
         </form>
       </fieldset>
     </div>
