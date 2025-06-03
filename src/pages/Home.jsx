@@ -12,7 +12,7 @@ const Home = () => {
       {!accessToken ? (
         <>
           <div className="font-['Tenada'] text-5xl text-gray-800">🦁 반가워요! 👋</div>
-          {/* <img src={yulikelion} alt="yu-likelion" className="w-56 rounded-full my-8"/> */}
+          <img src={yulikelion} alt="yu-likelion" className="w-56 rounded-full mt-5 mb-8"/>
           <Link to={"/sign-in"} className="w-xs bg-black text-white p-2 rounded-xl text-center hover:bg-gray-800 transition">
             로그인
           </Link>
