@@ -44,7 +44,7 @@ const UserInfo = () => {
 
   return (
     <div className="flex h-screen w-screen items-center justify-center bg-gradient-to-l from-blue-100 to-purple-200">
-      <fieldset className="border p-5 bg-white w-sm">
+      <fieldset className="border p-5 pb-10 bg-white w-sm">
         <legend className="p-2 font-['Tenada'] text-2xl">회원 정보</legend>
         {userInfo ? (
           <>
